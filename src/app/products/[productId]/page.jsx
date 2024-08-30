@@ -27,7 +27,7 @@ export default async function page({ params }) {
     return (
       <>
         <div className="pt-5">
-          <Link href={"/"} className="mx-2 bg-customPurple p-2 rounded-lg">
+          <Link href={"/"} className="mx-2  bg-customPurple p-2 rounded-lg">
             {" "}
             {"<"} Back
           </Link>
@@ -36,7 +36,7 @@ export default async function page({ params }) {
               <img
                 src={image}
                 alt={title}
-                className="w-full max-w-md md:max-w-lg lg:max-w-lg h-[500px] object-contain rounded-lg bg-white"
+                className="w-full mt-5 max-w-md md:max-w-lg lg:max-w-lg h-[500px] object-contain rounded-lg bg-white"
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left md:pr-8">
@@ -67,3 +67,7 @@ export default async function page({ params }) {
     }
   }
 }
+
+export const metadata = {
+  title: "product",
+};
