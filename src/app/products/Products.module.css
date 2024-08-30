@@ -3,6 +3,31 @@
   gap: 30px;
   padding: 20px;
   text-align: center;
+  grid-template-columns: 1fr; /* Default for xs screens */
+}
+
+.productsHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.productsHeader h1 {
+  background-color: rgb(60, 24, 100);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 30px;
+}
+
+.productsHeader p {
+  margin: 0px auto;
+  font-size: 16px;
+  width: 90%;
 }
 
 .productsBox {
@@ -15,29 +40,45 @@
 .productsBox img {
   height: 300px;
   width: 100%;
-}
-
-.products {
-  grid-template-columns: 1fr;
+  /* aspect-ratio: 240 / 365;
+  object-fit: 100% 100%; */
 }
 
 /* Medium screens (e.g., tablets) */
 
+/* Large screens (e.g., desktops) */
+
 @media (min-width: 480px) {
+  /* sm screens */
   .products {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-/* Large screens (e.g., desktops) */
+@media (min-width: 768px) {
+  /* md screens */
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media (min-width: 1024px) {
+  /* lg screens */
   .products {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
+  /* lg screens */
   .products {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* lg screens */
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }

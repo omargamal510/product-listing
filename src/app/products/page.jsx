@@ -14,11 +14,19 @@ export default async function Products() {
 
     return (
       <>
-        <div>
-          <h1>Our Products</h1>
+        <div className="">
+          <header className={styles.productsHeader}>
+            <h1>Our Products</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusantium maxime, quo non quia soluta sed! Facere possimus
+              accusantium et impedit quo nemo, optio ipsum harum quis
+              perferendis autem exercitationem numquam.
+            </p>
+          </header>
           <div className={styles.products}>
             {data.map((ele) => (
-              <Link href={`/products/${ele.id}`}>
+              <Link href={`/products/${ele.id}`} key={ele.id}>
                 <div className={styles.productsBox}>
                   <div
                     style={{
