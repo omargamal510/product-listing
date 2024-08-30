@@ -38,7 +38,7 @@ export default async function Products() {
                     <img src={ele.image} alt={ele.title} />
                   </div>
                   <p>{ele.title}</p>
-                  <p>{ele.price}</p>
+                  <p className="text-gray-400">${ele.price}</p>
                 </div>
 
                 <br></br>
